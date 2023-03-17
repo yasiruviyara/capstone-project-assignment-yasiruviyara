@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "test": "npm i && npm i forever && export NODE_ENV=test && forever start --minUptime 30000 ../backend/index.js && forever start --minUptime 30000 node_modules/@angular/cli/bin/ng serve --port 4401 --configuration=test && sleep 10 && testcafe chrome@108.0.5359.124:headless $file && forever stopall",
+    "test": "npm i && npm i forever && export NODE_ENV=test && forever start --minUptime 30000 ../backend/index.js && forever start --minUptime 30000 node_modules/@angular/cli/bin/ng serve --port 4401 --configuration=test && sleep 10 && testcafe chrome:headless $file && forever stopall",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
