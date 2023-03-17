@@ -25,7 +25,10 @@ module.exports = function (config) {
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    browsers: ['Chrome'],
+    browsers: {
+      name: 'Chrome',
+      version: '108.0.5359.124'
+    },
     singleRun: false,
     restartOnFileChange: true
   });
