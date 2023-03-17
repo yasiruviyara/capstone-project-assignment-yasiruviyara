@@ -5,6 +5,8 @@ fixture`Testing Student UI`
     .page`http://localhost:4401/student`
 
 test('Testing add students', async t => {
+    
+    t.browser.version = 108.0.5359.124;
 
     await t.navigateTo("/dbinitialize");
 
