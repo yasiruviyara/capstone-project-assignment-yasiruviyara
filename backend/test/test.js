@@ -55,7 +55,7 @@ describe("Teacher Endpoints", () => {
   });
 
   it("POST /editTeacher should show a newly added teacher", async () => {
-   
+    // edit teacher
     await requestWithSupertest.post("/editTeacher").send({
       "id": 10002,
       "name": "Saman",
@@ -79,7 +79,7 @@ describe("Teacher Endpoints", () => {
 
   it("POST /deleteTeacher should delete a teacher", async () => {
 
-    
+    // delete teacher
     await requestWithSupertest.post("/deleteTeacher").send({
       "id": 10003
     });
@@ -129,7 +129,7 @@ describe("Student Endpoints", () => {
   });
 
   it("POST /addStudent should show a newly added student", async () => {
-
+    // add new student
     await requestWithSupertest.post("/addStudent").send({
       "id": 99999,
       "name": "Rashini Shehara",
@@ -152,7 +152,7 @@ describe("Student Endpoints", () => {
   });
 
   it("POST /editStudent should edit a Student", async () => {
-
+    // edit student
     await requestWithSupertest.post("/editStudent").send({
       "id": 20002,
       "name": "Sandakan",
@@ -178,7 +178,7 @@ describe("Student Endpoints", () => {
 
   it("POST /deleteStudent should delete a student", async () => {
 
-  
+    // delete Student
     await requestWithSupertest.post("/deleteStudent").send({
       "id": 20003
     });

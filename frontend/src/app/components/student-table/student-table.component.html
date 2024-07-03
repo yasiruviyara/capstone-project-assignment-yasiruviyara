@@ -1,18 +1,8 @@
 <app-navbar title="Students"></app-navbar>
 <div class="add-btn-container">
   <div class="add-btn-elements-container">
-    <input 
-      id="student-search" 
-      style="height: 20px;" 
-      #box (keyup)="search(box.value)" 
-      placeholder="Search"
-    >
-    <button 
-      style="width: 120px; height: 43px; font-size: 14px;"  
-      (click)="addNewStudent()" 
-      class="btn">Add New &nbsp;<fa-icon [icon]="faPlus"
-    ></fa-icon>
-    </button>
+    <input id="student-search" style="height: 20px;" #box (keyup)="search(box.value)" placeholder="Search">
+    <button style="width: 120px; height: 43px; font-size: 14px;"  (click)="addNewStudent()" class="btn">Add New &nbsp;<fa-icon [icon]="faPlus"></fa-icon></button>
   </div>
 </div>
   <div class="table-container">
