@@ -23,7 +23,7 @@ const closeConnection = conn => {
     return conn.close();
   }
 };
-
+ 
 module.exports = {
   getDbConnection,
   closeConnection
