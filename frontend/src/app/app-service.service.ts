@@ -11,53 +11,53 @@ export class AppServiceService {
 
   constructor(private http: HttpClient) {
     if(environment.production == false){
-      this.ROOT_URL = 'test'
+      this.ROOT_URL = 'http://localhost:8080'
     }else{
-      this.ROOT_URL = 'api'
+      this.ROOT_URL = 'http://localhost:8080'
     }
   }
 
   initializeDB(){
-    return this.http.get(`/${this.ROOT_URL}/dbinitialize`)
+    return this.http.get(`/${this.ROOT_URL}/api/dbinitialize`)
   }
 
   getTeacherData(){
-    return this.http.get(`/${this.ROOT_URL}/listTeachers`)
+    return this.http.get(`/${this.ROOT_URL}/api/listTeachers`)
   }
 
   getStudentData(){
-    return this.http.get(`/${this.ROOT_URL}/listStudents`)
+    return this.http.get(`/${this.ROOT_URL}/api/listStudents`)
   }
 
   getOneStudentData(payload: Object){
-    return this.http.post(`/${this.ROOT_URL}/getStudentInfo`, payload)
+    return this.http.post(`/${this.ROOT_URL}/api/getStudentInfo`, payload)
   }
 
   getOneTeacherData(payload: Object){
-    return this.http.post(`/${this.ROOT_URL}/getTeacherInfo`, payload)
+    return this.http.post(`/${this.ROOT_URL}/api/getTeacherInfo`, payload)
   }
 
   addTeacher(payload: Object){
-    return this.http.post(`/${this.ROOT_URL}/addTeacher`, payload)
+    return this.http.post(`/${this.ROOT_URL}/api/addTeacher`, payload)
   }
 
   deleteTeacher(payload: Object){
-    return this.http.post(`/${this.ROOT_URL}/deleteTeacher`, payload)
+    return this.http.post(`/${this.ROOT_URL}/api/deleteTeacher`, payload)
   }
 
   editTeacher(payload: Object){
-    return this.http.post(`/${this.ROOT_URL}/editTeacher`, payload)
+    return this.http.post(`/${this.ROOT_URL}/api/editTeacher`, payload)
   }
 
   editStudent(payload: Object){
-    return this.http.post(`/${this.ROOT_URL}/editStudent`, payload)
+    return this.http.post(`/${this.ROOT_URL}/api/editStudent`, payload)
   }
 
   addStudent(payload: Object){
-    return this.http.post(`/${this.ROOT_URL}/addStudent`, payload)
+    return this.http.post(`/${this.ROOT_URL}/api/addStudent`, payload)
   }
 
   deleteStudent(payload: Object){
-    return this.http.post(`/${this.ROOT_URL}/deleteStudent`, payload)
+    return this.http.post(`/${this.ROOT_URL}/api/deleteStudent`, payload)
   }
 }
