@@ -1,8 +1,19 @@
 <app-navbar title="Teachers"></app-navbar>
 <div class="add-btn-container">
   <div class="add-btn-elements-container">
-    <input id="teacher-search" style="height: 20px;" #box (keyup)="search(box.value)" placeholder="Search">
-    <button style="width: 120px; height: 43px; font-size: 14px;" (click)="addNewTeacher()" class="btn">Add New &nbsp;<fa-icon [icon]="faPlus"></fa-icon></button>
+    <input 
+      id="teacher-search" 
+      style="height: 20px;" 
+      #box (keyup)="search(box.value)" 
+      placeholder="Search"
+    >
+    <button 
+      style="width: 120px; height: 43px; font-size: 14px;" 
+      (click)="addNewTeacher()" 
+      class="btn">
+      Add New &nbsp;
+      <fa-icon [icon]="faPlus"></fa-icon>
+    </button>
   </div>
 </div>
 <div class="table-container">
@@ -18,7 +29,10 @@
       <td>{{teacher[0].name}}</td>
       <td>{{teacher[0].id}}</td>
       <td>{{2022 - teacher[0].age}}</td>
-      <td id="teacher-edit-{{teacher[0].id}}" (click)="editTeacher(teacher[0].id)" style="text-align: center;">
+      <td 
+        id="teacher-edit-{{teacher[0].id}}" 
+        (click)="editTeacher(teacher[0].id)" 
+        style="text-align: center;">
         <fa-icon class="edit-icon" [icon]="faPenSquare"></fa-icon>
       </td>
       <td id="teacher-delete-{{teacher[0].id}}" (click)="deleteTeacher(teacher[0].id)"

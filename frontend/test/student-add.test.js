@@ -13,8 +13,8 @@ test('Testing add students', async t => {
     await t.typeText("#student-name", "Pasindu Basnayaka");
     await t.typeText("#student-age", "45");
     await t.typeText("#student-Hometown", "Catholic");
-    await t.click("#student-add");
-
+    await t.click("#student-add"); 
+ 
     await t.navigateTo("/student");
 
     const table = Selector('#student-table')
